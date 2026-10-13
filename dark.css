@@ -1,0 +1,38 @@
+body.dark-mode {
+  background-color: #0e0d0d;
+  color: #f2f2f2;
+}
+
+body.dark-mode .product-card {
+  background-color: #242424;
+  color: #a0a0a0;
+}
+
+body.dark-mode .header,
+body.dark-mode .category-nav button,
+body.dark-mode #toggle-dark,
+body.dark-mode .title-nav button,
+body.dark-mode .product-card button {
+  background-color: #242424;
+  color: #999999;
+  border-color: #000000;
+}
+
+body.dark-mode .sidebar {
+  background-color: #242424;
+  color: #a0a0a0;
+
+}
+
+body.dark-mode .card-bottom button {
+    color: #4b4b4b;
+}
+
+body.dark-mode .price {
+    color: #999999;
+}
+
+body.dark-mode .category-nav button:hover,
+body.dark-mode .title-nav button:hover {
+  background-color: none;
+}

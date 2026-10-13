@@ -1,0 +1,31 @@
+.layout {
+  display: flex;
+  gap: 2rem;
+  margin-right: 1rem;
+}
+
+main {
+  flex: 3;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 300px;
+  position: sticky;
+  top: 1rem;
+  height: fit-content;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 0.5rem;
+}

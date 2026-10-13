@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fake Store</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="list.css" />
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="dark.css" />
+    <link rel="stylesheet" href="picture.css" />
+</head>
+<body>
+    <header class="header">
+        <nav class="title-nav">
+        <button>Fake Store</button>
+        </nav>
+        <nav class="category-nav">
+        <button>Accessories</button>
+        <button>Clothes</button>
+        <button>Electronics</button>
+        <button id="toggle-dark" style="font-size: 12px;">Light Mode/Dark Mode</button>
+        </nav>
+    </header>
+<div class="picture">
+    <img src="markus-spiske-zVdAkU4s9lI-unsplash.jpg" alt="header-photo" style="width: 100%; border: 10px solid white; margin-bottom: 10px;">
+</div>
+  <div class="layout">
+  <main>
+    <div id="product-list" class="product-container">
+      <!-- Products will be loaded here by JavaScript -->
+    </div>
+  </main>
+    <aside id="shoppingcart" class="sidebar">
+        <h2 style="justify-self: center; padding-bottom: 10px;">Your Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

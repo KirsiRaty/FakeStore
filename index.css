@@ -1,0 +1,52 @@
+/* ================== Body Background ================== */
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  background-image: url('red.jpg'); /* your image path */
+  background-size: cover;           /* cover full width */
+  background-repeat: no-repeat;     /* prevents tiling */
+  background-position: top center;  /* starts at the top */
+  background-attachment: scroll;    /* scrolls with page */
+}
+
+/* ================== Header ================== */
+.header {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  border-radius: 4px;
+}
+
+/* ================== Title Nav Button ================== */
+.title-nav button {
+  background-color: transparent; /* removed background */
+  border: none;
+  padding: 10px 20px;
+  font-size: 32px !important;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: white;
+  text-shadow: 2px 2px rgb(39, 28, 28);
+}
+
+/* ================== Category Nav Buttons ================== */
+.category-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.category-nav button {
+  background-color: transparent; /* removed background */
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: white;
+  text-shadow: 2px 2px rgb(39, 28, 28);
+}
+
+.category-nav button:hover {
+  border-bottom: 2px solid white; /* subtle hover effect */
+}
