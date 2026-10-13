@@ -29,3 +29,26 @@ main {
 .sidebar li {
   margin-bottom: 0.5rem;
 }
+
+.sidebar { position: sticky; top: 102px; max-width: none; height: auto; padding: 24px 20px 18px; border: 1px solid var(--line); border-radius: 0; background: var(--surface); box-shadow: none; color: var(--ink); font-family: var(--sans); }
+.cart-heading { display: flex; justify-content: space-between; align-items: center; padding-bottom: 17px; border-bottom: 1px solid var(--line); }
+.cart-heading .eyebrow { margin-bottom: 8px; }
+.cart-heading h2 { margin: 0; font: 400 25px/1.05 var(--serif); }
+.cart-heading h2 span { color: var(--muted); font: 12px var(--sans); letter-spacing: 0; }
+.cart-mark { color: #8d967b; font-size: 19px; }
+.sidebar ul { list-style: none; margin: 0; padding: 0; }
+.cart-item { display: flex; align-items: center; gap: 11px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.cart-item img { flex: 0 0 auto; width: 48px; height: 55px; padding: 5px; background: #f3f1ec; object-fit: contain; mix-blend-mode: multiply; }
+.cart-item-copy { min-width: 0; flex: 1; }
+.cart-item-title { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; margin: 0; font-size: 10px; line-height: 1.45; }
+.cart-item-price { margin: 5px 0 0; color: var(--muted); font-size: 10px; }
+.cart-empty { padding: 19px 0; color: var(--muted); font: italic 14px var(--serif); }
+.cart-empty[hidden] { display: none; }
+.cart-summary { padding-top: 16px; }
+.subtotal-row { display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
+.subtotal-row strong { font-size: 13px; }
+.cart-summary > p { margin: 8px 0 17px; color: var(--muted); font-size: 9px; }
+.checkout-button { display: flex; width: 100%; justify-content: space-between; align-items: center; padding: 13px 14px; border: 1px solid var(--accent); background: var(--accent); color: #fff; font-size: 10px; cursor: pointer; transition: background .2s ease; }
+.checkout-button:hover { background: #46503a; }
+.checkout-button span { font-size: 15px; }
+@media (max-width: 760px) { .sidebar { position: static; padding: 21px 18px 17px; } .cart-item img { width: 52px; height: 58px; } }

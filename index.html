@@ -3,39 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fake Store</title>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="list.css" />
-    <link rel="stylesheet" href="cart.css" />
-    <link rel="stylesheet" href="dark.css" />
-    <link rel="stylesheet" href="picture.css" />
+  <meta name="theme-color" content="#f8f7f4" />
+  <meta name="description" content="Discover thoughtful everyday finds at Fakestore." />
+  <title>Fakestore — Everyday, well chosen</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="list.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <link rel="stylesheet" href="dark.css" />
+  <link rel="stylesheet" href="picture.css" />
 </head>
 <body>
-    <header class="header">
-        <nav class="title-nav">
-        <button>Fake Store</button>
-        </nav>
-        <nav class="category-nav">
-        <button>Accessories</button>
-        <button>Clothes</button>
-        <button>Electronics</button>
-        <button id="toggle-dark" style="font-size: 12px;">Light Mode/Dark Mode</button>
-        </nav>
-    </header>
-<div class="picture">
-    <img src="markus-spiske-zVdAkU4s9lI-unsplash.jpg" alt="header-photo" style="width: 100%; border: 10px solid white; margin-bottom: 10px;">
-</div>
-  <div class="layout">
-  <main>
-    <div id="product-list" class="product-container">
-      <!-- Products will be loaded here by JavaScript -->
+  <div class="announcement">A little something for your everyday&nbsp; <span>Free shipping on orders over $75</span></div>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Fakestore home">Fake<span>store</span><i>.</i></a>
+      <nav class="category-nav" aria-label="Shop categories">
+        <button class="nav-category is-active" type="button" data-filter="all">New in</button>
+        <button class="nav-category" type="button" data-filter="clothing">Clothing</button>
+        <button class="nav-category" type="button" data-filter="jewelery">Accessories</button>
+        <button class="nav-category" type="button" data-filter="electronics">Lifestyle</button>
+      </nav>
+      <div class="header-actions">
+        <button id="toggle-dark" class="icon-button theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+        <a class="bag-link" href="#shoppingcart" aria-label="View shopping bag">Bag <span id="cart-count">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Featured collection">
+      <img src="main.png" alt="A warm, carefully curated clothing and accessories shop" />
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">THE NEW SEASON EDIT</p>
+        <h1>Everyday,<br />well chosen.</h1>
+        <p>Good things for wherever the day takes you.</p>
+        <a class="hero-link" href="#collection">Explore the collection <span aria-hidden="true">→</span></a>
+      </div>
+      <span class="hero-index">01 / 04</span>
+    </section>
+
+    <div class="store-layout" id="collection">
+      <section class="catalog" aria-label="New arrivals">
+        <div class="catalog-heading">
+          <div>
+            <p class="eyebrow">A FRESH PERSPECTIVE</p>
+            <h2>New arrivals</h2>
+            <p class="catalog-subtitle">A considered mix of little favourites and everyday essentials.</p>
+          </div>
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="product-search" type="search" placeholder="Find something lovely" aria-label="Search products" />
+          </label>
+        </div>
+        <div class="collection-toolbar">
+          <div class="filter-list" aria-label="Filter products">
+            <button class="filter-chip is-active" type="button" data-filter="all">All pieces</button>
+            <button class="filter-chip" type="button" data-filter="clothing">Clothing</button>
+            <button class="filter-chip" type="button" data-filter="jewelery">Accessories</button>
+            <button class="filter-chip" type="button" data-filter="electronics">Lifestyle</button>
+          </div>
+          <label class="sort-control">Sort by
+            <select id="sort-products" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: low to high</option>
+              <option value="price-high">Price: high to low</option>
+              <option value="name">Name</option>
+            </select>
+          </label>
+        </div>
+        <p id="product-count" class="product-count" aria-live="polite">Finding your favourites…</p>
+        <div id="product-list" class="product-container" aria-live="polite"></div>
+      </section>
+      <aside id="shoppingcart" class="sidebar">
+        <div class="cart-heading">
+          <div>
+            <p class="eyebrow">YOUR PICKS</p>
+            <h2>Your bag <span id="cart-heading-count">(0)</span></h2>
+          </div>
+          <span class="cart-mark" aria-hidden="true">✳</span>
+        </div>
+        <ul id="cart-items"></ul>
+        <div class="cart-empty" id="cart-empty">Your bag is taking a little breather.</div>
+        <div class="cart-summary">
+          <div class="subtotal-row"><span>Subtotal</span><strong id="cart-subtotal">$0.00</strong></div>
+          <p>Shipping and taxes calculated at checkout.</p>
+          <button class="checkout-button" type="button">Continue to checkout <span aria-hidden="true">→</span></button>
+        </div>
+      </aside>
     </div>
   </main>
-    <aside id="shoppingcart" class="sidebar">
-        <h2 style="justify-self: center; padding-bottom: 10px;">Your Shopping Cart</h2>
-        <ul id="cart-items"></ul>
-    </aside>
-  </div>
+  <footer class="site-footer">
+    <a class="brand" href="#top">Fake<span>store</span><i>.</i></a>
+    <p>Considered finds for everyday living.</p>
+    <span>© 2026 Fakestore</span>
+  </footer>
 
   <script src="script.js"></script>
 </body>
